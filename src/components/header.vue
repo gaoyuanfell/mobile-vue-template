@@ -71,10 +71,10 @@
   }
 
   .toolbar-ios {
-    padding: 4px;
-    padding-left: 4px;
-    padding-right: 4px;
-    min-height: 44px;
+    padding: 0.04rem;
+    padding-left: 0.04rem;
+    padding-right: 0.04rem;
+    min-height: 0.44rem;
   }
 
   .bar-button {
@@ -128,7 +128,7 @@
   .title{
     left: 0;
     top: 0;
-    padding: 0 90px 1px;
+    padding: 0 0.9rem 1px;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -159,7 +159,7 @@
 
   .toolbar-title-ios {
     text-align: center;
-    font-size: 1.7rem;
+    font-size: 0.17rem;
     font-weight: 600;
     color: #000;
     pointer-events: auto;

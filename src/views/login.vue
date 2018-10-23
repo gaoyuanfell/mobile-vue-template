@@ -1,8 +1,8 @@
 <template>
   <div class="content-modal">
-    <y-header title="登陆" @titleMethod="test()" @barMethod="test()" titleRight="测试"></y-header>
+    <y-header title="登陆"></y-header>
     <div class="content">
-      <div class="scroll-content" margin-header margin-tabbar>
+      <div class="scroll-content" margin-header>
         <router-link :to="{name:'login2'}">登陆2</router-link>
         <router-link :to="{name:'login3'}">登陆3</router-link>
       </div>

@@ -104,12 +104,12 @@
   }
 
   .tabs-ios .tab-button {
-    max-width: 240px;
-    min-height: 49px;
-    font-size: 10px;
+    max-width: 2.4rem;
+    min-height: 0.49rem;
+    font-size: 0.1rem;
     font-weight: 500;
     color: #8c8c8c;
-    padding: 0 2px;
+    padding: 0 0.02rem;
     line-height: 1.2;
   }
 
@@ -121,7 +121,7 @@
     -webkit-align-self: center;
     -ms-flex-item-align: center;
     align-self: center;
-    min-width: 26px;
+    min-width: 0.26rem;
     max-width: 100%;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -130,9 +130,9 @@
   .tabs-ios .tab-button-icon {
     margin-top: 5px;
     margin-bottom: 1px;
-    min-width: 35px;
-    height: 26px;
-    font-size: 30px;
+    min-width: 0.35rem;
+    height: 0.26rem;
+    font-size: 0.3rem;
     color: #8c8c8c;
   }
 
