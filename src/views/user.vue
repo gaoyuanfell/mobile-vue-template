@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div class="push">
     <div class="tab-content">
-      <y-header title="用户"></y-header>
+      <y-header>
+        <span>用户</span>
+      </y-header>
       <div class="content">
         <div class="scroll-content" margin-tabbar margin-header>
           <router-link :to="{name:'login'}">登陆</router-link>
@@ -14,11 +16,7 @@
   </div>
 </template>
 <script>
-  export default {
-    mounted(){
-      console.info('user')
-    },
-  }
+  export default {}
 </script>
 <style>
 

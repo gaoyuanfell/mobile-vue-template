@@ -1,6 +1,8 @@
 <template>
   <div class="content-modal">
-    <y-header title="登陆"></y-header>
+    <y-header>
+      <span>登陆</span>
+    </y-header>
     <div class="content">
       <div class="scroll-content" margin-header>
         <router-link :to="{name:'login2'}">登陆2</router-link>
@@ -15,16 +17,7 @@
   </div>
 </template>
 <script>
-  export default {
-    mounted(){
-      console.info('login')
-    },
-    methods:{
-      test(){
-        console.info('ok')
-      }
-    }
-  }
+  export default {}
 </script>
 <style>
 

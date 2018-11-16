@@ -5,16 +5,18 @@ Vue.use(Router)
 
 const footer = () => import(/* webpackChunkName: "tabs" */ './components/footer');
 
+const home = () => import(/* webpackChunkName: "home" */ './views/home');
+
 const index = () => import(/* webpackChunkName: "tabs" */ './views/index');
 const info = () => import(/* webpackChunkName: "tabs" */ './views/info');
 const user = () => import(/* webpackChunkName: "tabs" */ './views/user');
+
 const login = () => import(/* webpackChunkName: "user" */ './views/login');
 
 let routes = [{
     path: '*',
     components: {
-        node: index,
-        footer: footer
+        index: home
     },
 }];
 
@@ -66,7 +68,6 @@ let tabs = [{
 
 export default new Router({
     mode: 'history',
-    // base: process.env.BASE_URL,
     routes: [
         ...routes,
         ...tabs,

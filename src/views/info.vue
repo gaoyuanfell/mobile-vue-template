@@ -1,6 +1,8 @@
 <template>
   <div class="tab-content">
-    <y-header title="详情"></y-header>
+    <y-header>
+      <span>详情</span>
+    </y-header>
     <div class="content">
       <div class="scroll-content" margin-tabbar margin-header>
         info

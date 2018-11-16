@@ -13,7 +13,6 @@
     box-shadow: 1px 1px 15px #3e3e3e;
 }
 
-
 @-webkit-keyframes zoomIn50 {
     from {
         opacity: 0;
@@ -112,3 +111,91 @@
 }
 
 /*用于页面导航动画*/
+
+
+/* 用于弹框动画 */
+.fade-enter-active {
+    animation: fade-in .5s;
+}
+.fade-leave-active {
+    animation: fade-in .5s reverse;
+}
+@-webkit-keyframes fade-in {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes fade-in {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* 用于弹框 */
+
+/* 用于下拉菜单 */
+.bounce-enter-active{
+  animation: .2s 0s ease-out;
+  animation-name: bounce-down;
+}
+
+.bounce-leave-active{
+  animation: .2s 0s ease-in;
+  animation-name: bounce-up;
+}
+
+@keyframes bounce-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes bounce-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes bounce-up {
+  0% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+@-webkit-keyframes bounce-up {
+  0% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+/* 用于下拉菜单 */

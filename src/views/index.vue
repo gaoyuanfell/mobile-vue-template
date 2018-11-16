@@ -1,22 +1,17 @@
 <template>
   <div class="tab-content">
-    <y-header title="首页"></y-header>
+    <y-header>
+      <span>首页</span>
+    </y-header>
     <div class="content">
-      <div class="scroll-content" ref="scroll">
-          <router-link :to="{name:'info'}">info</router-link>
-          <div v-for="item in 99"> 1111111111111111111111111 </div>
-        </div>
+      <div class="scroll-content" margin-header margin-tabbar>
+        <router-link :to="{name:'info'}">info</router-link>
+      </div>
     </div>
   </div>
 </template>
 <script>
-export default {
-  data() {
-    return {};
-  },
-  methods: {},
-  mounted() {}
-};
+export default {};
 </script>
 <style>
 </style>

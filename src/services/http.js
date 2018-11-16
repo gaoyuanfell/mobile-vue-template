@@ -1,26 +1,32 @@
 import axios from 'axios'
 import * as qs from 'querystring';
+import Loading from '../components/loading/Loading'
+import config from './config'
 
 let instance = axios.create({
-    baseURL: process.env.BASE_API, // api的base_url
+    baseURL: config.baseURL, // api的base_url
     timeout: 15000 // 请求超时时间
 });
 
 instance.interceptors.request.use(
     request => {
-        return request;
+      Loading.open()
+      return request;
     },
     error => {
-        return Promise.reject(error)
+      Loading.close()
+      return Promise.reject(error)
     }
 );
-
+// 处理跳转
 instance.interceptors.response.use(
     response => {
-        return response
+      Loading.close()
+      return response.data
     },
     error => {
-        return Promise.reject(error)
+      Loading.close()
+      return Promise.reject(error)
     }
 );
 
@@ -43,4 +49,12 @@ export function postFormData(url, body = {}, config = {}) {
         f.append(...data);
     })
     return instance.post(url, f, config)
+}
+
+export function getUrl(url, body = {}) {
+  let search = qs.stringify(body);
+  if (search) {
+    return config.baseURL + url + '?' + search;
+  }
+  return config.baseURL + url;
 }
