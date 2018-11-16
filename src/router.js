@@ -5,13 +5,13 @@ Vue.use(Router)
 
 const footer = () => import(/* webpackChunkName: "tabs" */ './components/footer');
 
-const home = () => import(/* webpackChunkName: "home" */ './views/home');
+const home = () => import(/* webpackChunkName: "home" */ './views/_home');
 
-const index = () => import(/* webpackChunkName: "tabs" */ './views/index');
-const info = () => import(/* webpackChunkName: "tabs" */ './views/info');
-const user = () => import(/* webpackChunkName: "tabs" */ './views/user');
+const index = () => import(/* webpackChunkName: "tabs" */ './views/_index');
+const info = () => import(/* webpackChunkName: "tabs" */ './views/_info');
+const user = () => import(/* webpackChunkName: "tabs" */ './views/_user');
 
-const login = () => import(/* webpackChunkName: "user" */ './views/login');
+const login = () => import(/* webpackChunkName: "user" */ './views/_login');
 
 let routes = [{
     path: '*',
