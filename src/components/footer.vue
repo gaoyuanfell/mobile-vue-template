@@ -207,4 +207,3 @@ export default {
   min-height: 11px;
 }
 </style>
-
