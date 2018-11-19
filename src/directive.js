@@ -38,9 +38,9 @@ export default function (Vue) {
 
   Vue.directive('ripple', {
     inserted: function(el, binding, vnode){
-      const containerRect = el.getBoundingClientRect();
       const duration = 450
       el.addEventListener('touchstart',(event)=> {
+        const containerRect = el.getBoundingClientRect();
         const x = event.touches[0].clientX
         const y = event.touches[0].clientY
         const radius = distanceToFurthestCorner(x, y, containerRect);
@@ -48,14 +48,16 @@ export default function (Vue) {
         const offsetY = y - containerRect.top;
 
         const rippleBox = document.createElement('div')
-        rippleBox.style.width = `${containerRect.width}px`;
-        rippleBox.style.height = `${containerRect.height}px`;
+        rippleBox.style.width = `${el.clientWidth}px`;
+        rippleBox.style.height = `${el.clientHeight}px`;
         rippleBox.style.overflow = 'hidden';
-        rippleBox.style.position = 'absolute';
-        // rippleBox.style.top = '0';
-        // rippleBox.style.left = '0';
-        // rippleBox.style.right = '0';
-        // rippleBox.style.bottom = '0';
+        rippleBox.style.position = 'fixed';
+        rippleBox.style.zIndex = 9999999999;
+        el.style.contain = 'content'
+
+        rippleBox.style.top = `${0}px`;
+        rippleBox.style.left = `${0}px`;
+
         const ripple = document.createElement('div');
         ripple.classList.add('ripple');
         ripple.style.left = `${offsetX - radius}px`;
