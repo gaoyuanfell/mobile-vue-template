@@ -46,8 +46,7 @@ export default {
   bottom: 0;
   right: 0;
   position: absolute;
-  z-index: 0;
-  /*overflow: hidden;*/
+  z-index: -1;
   &.show {
     z-index: 11;
   }
