@@ -51,9 +51,11 @@ export default function (Vue) {
         rippleBox.style.width = `${el.clientWidth}px`;
         rippleBox.style.height = `${el.clientHeight}px`;
         rippleBox.style.overflow = 'hidden';
-        rippleBox.style.position = 'fixed';
+        // rippleBox.style.position = 'fixed';
+        rippleBox.style.position = 'absolute';
         rippleBox.style.zIndex = 9999999999;
-        el.style.contain = 'content'
+        // el.style.contain = 'content'
+        el.style.position = 'relative';
 
         rippleBox.style.top = `${0}px`;
         rippleBox.style.left = `${0}px`;

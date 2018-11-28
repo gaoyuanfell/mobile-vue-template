@@ -2,16 +2,16 @@
   <div class="tabbar tabs-ios show-tabbar">
 
 
-    <template v-for="m in menu">
+    <!-- <template v-for="m in menu">
       <router-link :to="{path: m.route}" class="tab-button">
         <div class="tab-button-icon" :class="{'active': path(m.route), 'icon-index': m.code === 'ZCWAP_ADS_HOME' || m.code === 'ZCMOBI_WAP_V4_US_HOME', 'icon-user': m.code === 'ZCMOBI_WAP_V4_US_USERS', 'icon-data': m.code === 'ZCWAP_ADS_DATA', 'icon-campaign': m.code === 'ZCWAP_ADS_CAMPAIGN', 'icon-creative': m.code === 'ZCWAP_ADS_CREATIVE'}">
 
         </div>
         <span class="tab-button-text">{{m.name}}</span>
       </router-link>
-    </template>
+    </template> -->
 
-    <!-- <router-link to="/index" class="tab-button">
+    <router-link to="/index" class="tab-button">
       <div class="tab-button-icon icon-index" :class="{'active': path('index')}">
 
       </div>
@@ -23,18 +23,12 @@
       </div>
       <span class="tab-button-text">数据</span>
     </router-link>
-    <router-link to="/campaign" class="tab-button">
-      <div class="tab-button-icon icon-campaign" :class="{'active': path('campaign')}">
+    <router-link to="/user" class="tab-button">
+      <div class="tab-button-icon icon-campaign" :class="{'active': path('user')}">
 
       </div>
-      <span class="tab-button-text">活动</span>
+      <span class="tab-button-text">用户</span>
     </router-link>
-    <router-link to="/creative" class="tab-button">
-      <div class="tab-button-icon icon-creative" :class="{'active': path('creative')}">
-
-      </div>
-      <span class="tab-button-text">创意</span>
-    </router-link> -->
   </div>
 </template>
 
