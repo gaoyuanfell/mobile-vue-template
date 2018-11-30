@@ -3,7 +3,7 @@
     <y-header>
       <span>登陆</span>
     </y-header>
-    <tab-scroll>
+    <tab-scroll style="background: red;">
       <router-link :to="{name:'login2'}">登陆2</router-link>
       <router-link :to="{name:'login3'}">登陆3</router-link>
     </tab-scroll>

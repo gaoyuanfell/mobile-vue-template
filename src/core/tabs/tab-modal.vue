@@ -14,7 +14,6 @@ export default {
   },
   watch: {
     zIndex(val) {
-      console.info(val)
       this.$refs.modal.style.zIndex = val;
     }
   },
@@ -31,6 +30,7 @@ export default {
   bottom: 0;
   right: 0;
   display: block;
+  z-index: 11;
   background: #f2f2f2;
   contain: strict;
 }

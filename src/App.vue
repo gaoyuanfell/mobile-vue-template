@@ -6,9 +6,9 @@
       </transition-fade-in-out>
 
       <transition-fade-in-out>
-        <!-- <keep-alive> -->
+        <keep-alive>
           <router-view name="footer"></router-view>
-        <!-- </keep-alive> -->
+        </keep-alive>
       </transition-fade-in-out>
     </tabs>
 
