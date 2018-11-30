@@ -1,24 +1,20 @@
 <template>
-  <div class="content-modal">
+  <tab-modal>
     <y-header>
       <span>登陆</span>
     </y-header>
-    <div class="content">
-      <div class="scroll-content" margin-header>
-        <router-link :to="{name:'login2'}">登陆2</router-link>
-        <router-link :to="{name:'login3'}">登陆3</router-link>
-      </div>
-    </div>
+    <tab-scroll>
+      <router-link :to="{name:'login2'}">登陆2</router-link>
+      <router-link :to="{name:'login3'}">登陆3</router-link>
+    </tab-scroll>
 
-    <transition name="custom-classes-transition" enter-active-class="animated nav-open" leave-active-class="animated nav-close">
+    <transition-nav-open-close>
       <router-view></router-view>
-    </transition>
-
-  </div>
+    </transition-nav-open-close>
+  </tab-modal>
 </template>
 <script>
-  export default {}
+export default {};
 </script>
 <style>
-
 </style>

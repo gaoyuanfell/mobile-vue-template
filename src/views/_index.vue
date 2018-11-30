@@ -1,14 +1,12 @@
 <template>
-  <div class="tab-content">
+  <tab-modal :zIndex="1">
     <y-header>
       <span>首页</span>
     </y-header>
-    <div class="content">
-      <div class="scroll-content" margin-header margin-tabbar>
-        <router-link :to="{name:'info'}">info</router-link>
-      </div>
-    </div>
-  </div>
+    <tab-scroll marginBottom="1rem">
+      <router-link :to="{name:'info'}">info</router-link>
+    </tab-scroll>
+  </tab-modal>
 </template>
 <script>
 export default {};

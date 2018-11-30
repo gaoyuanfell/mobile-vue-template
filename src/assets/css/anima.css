@@ -6,7 +6,7 @@
 
 /*用于页面导航动画*/
 
-.nav-open{
+/* .nav-open{
     -webkit-animation-name: zoomIn50;
     animation-name: zoomIn50;
     transform-origin: 50% 50%;
@@ -108,7 +108,7 @@
     to {
         opacity: 0;
     }
-}
+} */
 
 /*用于页面导航动画*/
 
