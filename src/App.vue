@@ -1,27 +1,31 @@
 <template>
-  <div class="main">
-    <tabs>
-      <transition-fade-in-out>
+<div class="main">
+    <div class="tabs">
+      <transition name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
         <router-view name="node"></router-view>
-      </transition-fade-in-out>
+      </transition>
 
-      <transition-fade-in-out>
+      <transition name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
         <keep-alive>
           <router-view name="footer"></router-view>
         </keep-alive>
-      </transition-fade-in-out>
-    </tabs>
+      </transition>
+    </div>
 
     <!-- 通过路由 push进来的页面渲染view -->
-    <transition-nav-open-close>
+    <transition name="custom-classes-transition" enter-active-class="animated nav-open" leave-active-class="animated nav-close">
       <router-view name="mode"></router-view>
-    </transition-nav-open-close>
+    </transition>
 
     <!-- 首次加载 -->
-    <transition-nav-open-close>
+    <transition  name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut">
       <router-view name="index"></router-view>
-    </transition-nav-open-close>
+    </transition>
+
+
+
   </div>
+
 </template>
 
 <script>

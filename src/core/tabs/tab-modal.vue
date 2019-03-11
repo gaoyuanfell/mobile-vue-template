@@ -30,9 +30,9 @@ export default {
   bottom: 0;
   right: 0;
   display: block;
-  z-index: 11;
+  z-index: 1000;
   background: #f2f2f2;
-  contain: strict;
+  contain: layout size style;
 }
 </style>
 

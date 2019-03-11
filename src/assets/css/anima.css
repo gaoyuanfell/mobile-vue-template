@@ -6,7 +6,7 @@
 
 /*用于页面导航动画*/
 
-/* .nav-open{
+.nav-open{
     -webkit-animation-name: zoomIn50;
     animation-name: zoomIn50;
     transform-origin: 50% 50%;
@@ -108,7 +108,7 @@
     to {
         opacity: 0;
     }
-} */
+}
 
 /*用于页面导航动画*/
 
@@ -196,6 +196,64 @@
   100% {
     opacity: 0;
     transform: translateY(-100%);
+  }
+}
+/* 用于下拉菜单 */
+
+
+/* 用于下拉菜单 从底部开始的*/
+.bounce-bottom-enter-active{
+  animation: .2s 0s ease-out;
+  animation-name: bounce-bottom-up;
+}
+
+.bounce-bottom-leave-active{
+  animation: .2s 0s ease-in;
+  animation-name: bounce-bottom-down;
+}
+/* 消失 */
+@keyframes bounce-bottom-down {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+@-webkit-keyframes bounce-bottom-down {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+/* 出现 */
+@keyframes bounce-bottom-up {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes bounce-bottom-up {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 /* 用于下拉菜单 */

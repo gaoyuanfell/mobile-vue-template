@@ -1,15 +1,27 @@
 <template>
-  <tab-modal :zIndex="1">
-    <y-header>
-      <span>详情</span>
-    </y-header>
-    <tab-scroll marginBottom="1rem">info
-      <router-link :to="{name:'user'}">user</router-link>
-    </tab-scroll>
-  </tab-modal>
+  <div class="push">
+    <div class="tab-content">
+      <div class="content">
+        <y-header>user</y-header>
+        <div class="scroll-content" margin-tabbar margin-header>
+
+        </div>
+      </div>
+    </div>
+
+    <transition name="custom-classes-transition" enter-active-class="animated nav-open" leave-active-class="animated nav-close">
+      <router-view></router-view>
+    </transition>
+  </div>
 </template>
 <script>
-export default {};
+export default {
+  data(){
+    return {
+
+    }
+  }
+};
 </script>
-<style>
+<style lang="less" scoped>
 </style>

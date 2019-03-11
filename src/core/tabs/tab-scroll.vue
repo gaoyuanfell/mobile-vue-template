@@ -1,6 +1,8 @@
 <template>
-  <div class="tab-scroll" ref="scroll">
-    <slot></slot>
+  <div class="content" ref="scroll">
+    <div class="tab-scroll">
+      <slot></slot>
+    </div>
   </div>
 </template>
 <script>
@@ -28,6 +30,18 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+.content{
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #f2f2f2;
+  contain: layout size style;
+}
 .tab-scroll {
   left: 0;
   right: 0;
